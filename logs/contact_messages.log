@@ -1,0 +1,3 @@
+{"timestamp":"2025-07-31 21:38:59","ip":"unknown","name":"Test User","email":"test@example.com","subject":"Email Test from visualsbyiammojo","status":"error","error":"Extension missing: openssl"}
+{"timestamp":"2025-07-31 21:39:39","ip":"unknown","name":"Test User","email":"test@example.com","subject":"Email Test from visualsbyiammojo","status":"error","error":"SMTP Error: Could not authenticate."}
+{"timestamp":"2025-07-31 21:45:52","ip":"unknown","name":"Test User","email":"test@example.com","subject":"Email Test from visualsbyiammojo","status":"sent","message_length":142}
