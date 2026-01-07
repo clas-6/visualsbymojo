@@ -28,62 +28,6 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <style>
-      .about-hero-banner {
-        background: url('assets/img/gallery/gallery-1.jpg') center/cover no-repeat;
-        min-height: 320px;
-        position: relative;
-      }
-      .about-hero-banner .container {
-        z-index: 2;
-      }
-      .about-hero-banner::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: rgba(20, 20, 20, 0.7);
-        z-index: 1;
-      }
-      .about-hero-banner .container > * {
-        position: relative;
-        z-index: 2;
-      }
-      .about-hero-banner h1,
-      .about-hero-banner p,
-      .about-hero-banner a {
-        color: #fff !important;
-        text-shadow: 0 2px 8px rgba(0,0,0,0.5);
-      }
-      .about-skills {
-        background: #181818 !important;
-      }
-      .about-skills .bg-white {
-        background: #232323 !important;
-        color: #fff;
-        border: 1px solid #232323;
-      }
-      .about-skills .fw-bold,
-      .about-skills h2 {
-        color: #fff;
-      }
-      .about-skills .text-muted,
-      .about-skills p.small {
-        color: #bbb !important;
-      }
-      .about-skills .text-warning {
-        color: #ffb347 !important;
-      }
-      .about-skills .shadow-sm {
-        box-shadow: 0 2px 12px rgba(0,0,0,0.25) !important;
-      }
-      .about-skills .p-4 {
-        transition: box-shadow 0.2s, transform 0.2s;
-      }
-      .about-skills .p-4:hover {
-        box-shadow: 0 4px 24px rgba(0,0,0,0.35) !important;
-        transform: translateY(-4px) scale(1.03);
-      }
-    </style>
 </head>
 
 <body>
@@ -122,10 +66,12 @@
     <section class="about-hero-banner d-flex align-items-center justify-content-center" style="background: url('assets/img/gallery/gallery-1.jpg') center/cover no-repeat; min-height: 320px; position: relative;">
       <div style="background: rgba(0,0,0,0.45); position: absolute; inset: 0;"></div>
       <div class="container position-relative text-center text-white" style="z-index:2;">
-        <img src="assets/img/profile-img.png" alt="Akintolure MojolaOluwa portrait" class="rounded-circle shadow mb-3" style="width:120px; height:120px; object-fit:cover; border:4px solid #fff;">
-        <h1 class="display-5 fw-bold mb-2">Akintolure MojolaOluwa</h1>
-        <p class="lead mb-3">Professional Photographer & Cinematographer</p>
-        <a class="btn btn-warning btn-lg px-4" href="contact.html">Available for hire</a>
+        <div class="d-flex flex-column align-items-center justify-content-center w-100" style="min-height:220px;">
+          <img src="assets/img/profile-img.png" alt="Akintolure MojolaOluwa portrait" class="about-hero-img rounded-circle shadow mb-3" style="width:120px; height:120px; object-fit:cover; border:4px solid #fff; background:#232323;">
+          <h1 class="display-5 fw-bold mb-2">Akintolure MojolaOluwa</h1>
+          <p class="lead mb-3">Professional Photographer & Cinematographer</p>
+          <a class="btn btn-warning btn-lg px-4" href="contact.html">Available for hire</a>
+        </div>
       </div>
     </section>
     <!-- End Hero Banner Section -->
@@ -145,28 +91,28 @@
           </div>
         </div>
         <div class="row g-4 justify-content-center">
-          <div class="col-6 col-md-3">
+          <div class="col-12 col-sm-6 col-md-3">
             <div class="p-4 bg-white rounded shadow-sm h-100">
               <i class="bi bi-camera2 display-5 text-warning mb-2"></i>
               <h5 class="fw-bold">Photography</h5>
               <p class="small text-muted">Portraits, events, birthdays, and more.</p>
             </div>
           </div>
-          <div class="col-6 col-md-3">
+          <div class="col-12 col-sm-6 col-md-3">
             <div class="p-4 bg-white rounded shadow-sm h-100">
               <i class="bi bi-film display-5 text-warning mb-2"></i>
               <h5 class="fw-bold">Cinematography</h5>
               <p class="small text-muted">Event films, brand stories, and creative video.</p>
             </div>
           </div>
-          <div class="col-6 col-md-3">
+          <div class="col-12 col-sm-6 col-md-3">
             <div class="p-4 bg-white rounded shadow-sm h-100">
               <i class="bi bi-brush display-5 text-warning mb-2"></i>
               <h5 class="fw-bold">Editing</h5>
               <p class="small text-muted">Photo retouching and video post-production.</p>
             </div>
           </div>
-          <div class="col-6 col-md-3">
+          <div class="col-12 col-sm-6 col-md-3">
             <div class="p-4 bg-white rounded shadow-sm h-100">
               <i class="bi bi-megaphone display-5 text-warning mb-2"></i>
               <h5 class="fw-bold">Brand Shoots</h5>
@@ -182,7 +128,7 @@
     <section id="about" class="about">
       <div class="container">
 
-        <div class="row gy-4 justify-content-center">
+        <div class="row gy-4 justify-content-center flex-column-reverse flex-lg-row align-items-center">
           <div class="col-lg-6 content">
             <h2>Professional Photographer from Nigeria</h2>
             <div class="row">
@@ -209,8 +155,8 @@
               I am skilled in content creation, visual storytelling, and capturing moments that engage, inspire, and stand out across digital platforms. I thrive on turning abstract ideas into cinematic experiences that connect with audiences and leave a lasting impact.
             </p>
           </div>
-          <div class="col-lg-6">
-            <img src="assets/img/profile-img.png" class="img-fluid" alt="">
+          <div class="col-lg-6 d-flex justify-content-center align-items-center mb-4 mb-lg-0">
+            <img src="assets/img/profile-img.png" class="img-fluid rounded-circle shadow" alt="Akintolure MojolaOluwa portrait" style="max-width:220px; width:100%; height:auto; object-fit:cover; border:4px solid #fff; background:#232323;">
           </div>
         </div>
 
