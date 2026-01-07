@@ -37,6 +37,39 @@
       border-bottom: none;
       height: 100%;
     }
+    .pricing .card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      border: 2px solid #e0e0e0;
+      transition: box-shadow 0.2s, border-color 0.2s;
+    }
+    .pricing .card:hover {
+      box-shadow: 0 8px 32px rgba(0,0,0,0.16);
+      border-color: #bdbdbd;
+    }
+    .pricing .card .card-title {
+      color: #222;
+      font-weight: 700;
+      font-size: 1.25rem;
+    }
+    .pricing .card .display-6 {
+      color: #d35400;
+      font-size: 2rem;
+    }
+    .pricing .card .card-text {
+      color: #555;
+      font-size: 1rem;
+    }
+    .pricing .card .mb-3 i {
+      color: #d35400;
+      filter: drop-shadow(0 2px 4px rgba(211,84,0,0.15));
+    }
+    @media (max-width: 767px) {
+      .pricing .card {
+        margin-bottom: 1.5rem;
+      }
+    }
   </style>
 </head>
 
@@ -285,3 +318,4 @@
 </body>
 
 </html>
+``` 
