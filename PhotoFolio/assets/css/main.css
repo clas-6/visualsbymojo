@@ -605,6 +605,151 @@ h6 {
   line-height: 0;
 }
 
+/* ======= About Page Custom Styles ======= */
+.about-hero-banner {
+  background: url('../img/gallery/gallery-1.jpg') center/cover no-repeat;
+  min-height: 320px;
+  position: relative;
+}
+.about-hero-banner .container {
+  z-index: 2;
+}
+.about-hero-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 20, 20, 0.7);
+  z-index: 1;
+}
+.about-hero-banner .container > * {
+  position: relative;
+  z-index: 2;
+}
+.about-hero-banner h1,
+.about-hero-banner p,
+.about-hero-banner a {
+  color: #fff !important;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+.about-skills {
+  background: #181818 !important;
+}
+.about-skills .bg-white {
+  background: #232323 !important;
+  color: #fff;
+  border: 1px solid #232323;
+}
+.about-skills .fw-bold,
+.about-skills h2 {
+  color: #fff;
+}
+.about-skills .text-muted,
+.about-skills p.small {
+  color: #bbb !important;
+}
+.about-skills .text-warning {
+  color: #ffb347 !important;
+}
+.about-skills .shadow-sm {
+  box-shadow: 0 2px 12px rgba(0,0,0,0.25) !important;
+}
+.about-skills .p-4 {
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.about-skills .p-4:hover {
+  box-shadow: 0 4px 24px rgba(0,0,0,0.35) !important;
+  transform: translateY(-4px) scale(1.03);
+}
+@media (max-width: 991.98px) {
+  .about-hero-banner .container {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+  .about-hero-banner h1 {
+    font-size: 2rem;
+  }
+  .about-hero-banner p.lead {
+    font-size: 1rem;
+  }
+  .about-hero-banner img.rounded-circle {
+    width: 90px !important;
+    height: 90px !important;
+  }
+}
+@media (max-width: 575.98px) {
+  .about-hero-banner .container {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  .about-hero-banner h1 {
+    font-size: 1.3rem;
+  }
+  .about-hero-banner p.lead {
+    font-size: 0.95rem;
+  }
+  .about-hero-banner img.rounded-circle {
+    width: 70px !important;
+    height: 70px !important;
+    margin-bottom: 0.5rem;
+  }
+}
+/* Responsive skills/services cards */
+@media (max-width: 991.98px) {
+  .about-skills .row.g-4 > [class^='col-'] {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+@media (max-width: 575.98px) {
+  .about-skills .row.g-4 > [class^='col-'] {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .about-skills .p-4 {
+    padding: 1.25rem !important;
+  }
+}
+/* Responsive profile image in hero */
+.about-hero-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border: 4px solid #fff;
+  background: #232323;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+@media (max-width: 575.98px) {
+  .about-hero-img {
+    width: 90px;
+    height: 90px;
+  }
+  .about-hero-banner h1 {
+    font-size: 1.5rem;
+  }
+  .about-hero-banner p.lead {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 991.98px) {
+  .about-skills .col-md-3 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+@media (max-width: 575.98px) {
+  .about-skills .col-md-3 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+/* Ensure skills cards stack and are spaced on mobile */
+.about-skills .row.g-4 > [class^='col-'] {
+  display: flex;
+}
+.about-skills .p-4 {
+  width: 100%;
+}
+
 /*--------------------------------------------------------------
 # Testimonials Section
 --------------------------------------------------------------*/
