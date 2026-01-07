@@ -631,6 +631,15 @@ h6 {
   color: #fff !important;
   text-shadow: 0 2px 8px rgba(0,0,0,0.5);
 }
+.about-hero-banner .btn-warning {
+  background: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+  color: #fff !important;
+}
+.about-hero-banner .btn-warning:hover {
+  background: #466bb3 !important;
+  border-color: #466bb3 !important;
+}
 .about-skills {
   background: #181818 !important;
 }
@@ -647,8 +656,9 @@ h6 {
 .about-skills p.small {
   color: #bbb !important;
 }
-.about-skills .text-warning {
-  color: #ffb347 !important;
+.about-skills .text-warning,
+.about-skills .bi.text-warning {
+  color: var(--color-primary) !important;
 }
 .about-skills .shadow-sm {
   box-shadow: 0 2px 12px rgba(0,0,0,0.25) !important;
