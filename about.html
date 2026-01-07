@@ -28,7 +28,62 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  
+  <style>
+      .about-hero-banner {
+        background: url('assets/img/gallery/gallery-1.jpg') center/cover no-repeat;
+        min-height: 320px;
+        position: relative;
+      }
+      .about-hero-banner .container {
+        z-index: 2;
+      }
+      .about-hero-banner::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(20, 20, 20, 0.7);
+        z-index: 1;
+      }
+      .about-hero-banner .container > * {
+        position: relative;
+        z-index: 2;
+      }
+      .about-hero-banner h1,
+      .about-hero-banner p,
+      .about-hero-banner a {
+        color: #fff !important;
+        text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+      }
+      .about-skills {
+        background: #181818 !important;
+      }
+      .about-skills .bg-white {
+        background: #232323 !important;
+        color: #fff;
+        border: 1px solid #232323;
+      }
+      .about-skills .fw-bold,
+      .about-skills h2 {
+        color: #fff;
+      }
+      .about-skills .text-muted,
+      .about-skills p.small {
+        color: #bbb !important;
+      }
+      .about-skills .text-warning {
+        color: #ffb347 !important;
+      }
+      .about-skills .shadow-sm {
+        box-shadow: 0 2px 12px rgba(0,0,0,0.25) !important;
+      }
+      .about-skills .p-4 {
+        transition: box-shadow 0.2s, transform 0.2s;
+      }
+      .about-skills .p-4:hover {
+        box-shadow: 0 4px 24px rgba(0,0,0,0.35) !important;
+        transform: translateY(-4px) scale(1.03);
+      }
+    </style>
 </head>
 
 <body>
