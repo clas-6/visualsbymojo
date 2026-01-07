@@ -63,20 +63,65 @@
 
   <main id="main" data-aos="fade" data-aos-delay="1500">
 
+    <!-- ======= Hero Banner Section ======= -->
+    <section class="about-hero-banner d-flex align-items-center justify-content-center" style="background: url('assets/img/gallery/gallery-1.jpg') center/cover no-repeat; min-height: 320px; position: relative;">
+      <div style="background: rgba(0,0,0,0.45); position: absolute; inset: 0;"></div>
+      <div class="container position-relative text-center text-white" style="z-index:2;">
+        <img src="assets/img/profile-img.png" alt="Akintolure MojolaOluwa portrait" class="rounded-circle shadow mb-3" style="width:120px; height:120px; object-fit:cover; border:4px solid #fff;">
+        <h1 class="display-5 fw-bold mb-2">Akintolure MojolaOluwa</h1>
+        <p class="lead mb-3">Professional Photographer & Cinematographer</p>
+        <a class="btn btn-warning btn-lg px-4" href="contact.html">Available for hire</a>
+      </div>
+    </section>
+    <!-- End Hero Banner Section -->
+
     <!-- ======= End Page Header ======= -->
-    <div class="page-header d-flex align-items-center">
-      <div class="container position-relative">
-        <div class="row d-flex justify-content-center">
-          <div class="col-lg-6 text-center">
-            <h2>About Me</h2>
-            <p>A passionate visual storyteller from Lagos, Nigeria, with over 5 years of experience in turning ideas into cinematic and photographic art.</p>
+    <div class="page-header d-flex align-items-center d-none">
+      <!-- Hidden old header, replaced by hero banner above -->
+    </div><!-- End Page Header -->
 
-            <a class="cta-btn" href="contact.html">Available for hire</a>
-
+    <!-- ======= Skills/Services Section ======= -->
+    <section class="about-skills py-5 bg-light">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-4">
+          <div class="col-lg-8">
+            <h2 class="fw-bold mb-3">What I Do</h2>
+            <p class="text-muted">I offer a range of creative services to help you capture, celebrate, and promote your story.</p>
+          </div>
+        </div>
+        <div class="row g-4 justify-content-center">
+          <div class="col-6 col-md-3">
+            <div class="p-4 bg-white rounded shadow-sm h-100">
+              <i class="bi bi-camera2 display-5 text-warning mb-2"></i>
+              <h5 class="fw-bold">Photography</h5>
+              <p class="small text-muted">Portraits, events, birthdays, and more.</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="p-4 bg-white rounded shadow-sm h-100">
+              <i class="bi bi-film display-5 text-warning mb-2"></i>
+              <h5 class="fw-bold">Cinematography</h5>
+              <p class="small text-muted">Event films, brand stories, and creative video.</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="p-4 bg-white rounded shadow-sm h-100">
+              <i class="bi bi-brush display-5 text-warning mb-2"></i>
+              <h5 class="fw-bold">Editing</h5>
+              <p class="small text-muted">Photo retouching and video post-production.</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="p-4 bg-white rounded shadow-sm h-100">
+              <i class="bi bi-megaphone display-5 text-warning mb-2"></i>
+              <h5 class="fw-bold">Brand Shoots</h5>
+              <p class="small text-muted">Content for businesses, products, and social media.</p>
+            </div>
           </div>
         </div>
       </div>
-    </div><!-- End Page Header -->
+    </section>
+    <!-- End Skills/Services Section -->
 
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
@@ -215,6 +260,24 @@
 
       </div>
     </section><!-- End Testimonials Section -->
+
+    <!-- ======= Accessibility Improvements ======= -->
+    <script>
+      // Make phone and email clickable
+      document.addEventListener('DOMContentLoaded', function() {
+        var phone = document.querySelector('li strong:contains("Phone")');
+        if (phone && phone.nextSibling) {
+          var number = phone.nextSibling.textContent.trim();
+          phone.nextSibling.innerHTML = `<a href="tel:${number}">${number}</a>`;
+        }
+        var email = document.querySelector('li strong:contains("Email")');
+        if (email && email.nextSibling) {
+          var mail = email.nextSibling.textContent.trim();
+          email.nextSibling.innerHTML = `<a href="mailto:${mail}">${mail}</a>`;
+        }
+      });
+    </script>
+    <!-- End Accessibility Improvements -->
 
   </main><!-- End #main -->
 
