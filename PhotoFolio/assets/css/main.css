@@ -1426,3 +1426,22 @@ h6 {
 .footer .credits a {
   color: var(--color-primary);
 }
+
+/*--------------------------------------------------------------
+# Custom Styles
+--------------------------------------------------------------*/
+.text-warning,
+.bi.text-warning {
+  color: var(--color-primary) !important;
+  fill: var(--color-primary) !important;
+}
+.btn-warning {
+  background: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+  color: #fff !important;
+}
+.btn-warning:hover, .btn-warning:focus {
+  background: #466bb3 !important;
+  border-color: #466bb3 !important;
+  color: #fff !important;
+}
