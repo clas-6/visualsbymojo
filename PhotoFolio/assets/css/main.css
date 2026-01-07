@@ -605,6 +605,29 @@ h6 {
   line-height: 0;
 }
 
+/* Modern profile image style for about page hero */
+.profile-img-modern {
+  width: 170px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2.5px solid #007bff; /* blue accent */
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  background: #fff;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+.profile-img-modern:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  border-color: #0056b3;
+}
+
+/* Remove old inline style if present */
+.about-hero-img {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
 /* Restore about-hero-banner and about-skills to previous backgrounds, borders, and colors */
 .about-hero-banner {
   background: url('../img/gallery/gallery-1.jpg') center/cover no-repeat;
