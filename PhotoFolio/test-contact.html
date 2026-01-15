@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>visualsbyiammojo - Contact Form Test</title>
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { padding: 40px; background-color: #f8f9fa; }
+        .test-container { max-width: 600px; margin: 0 auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.1); }
+        .loading { color: #007bff; font-weight: bold; }
+        .error-message { color: #dc3545; font-weight: bold; }
+        .sent-message { color: #28a745; font-weight: bold; }
+        .btn-primary { background-color: #007bff; border-color: #007bff; padding: 12px 30px; }
+        .form-control:focus { border-color: #007bff; box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25); }
+        .is-invalid { border-color: #dc3545; }
+        .invalid-feedback { display: block; color: #dc3545; }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h2 class="text-center mb-4">🧪 visualsbyiammojo Contact Form Test</h2>
+        <p class="text-center text-muted mb-4">Testing Formspree integration</p>
+        
+        <form action="https://formspree.io/f/manrvkdd" method="POST" role="form" class="formspree-form" id="contactForm">
+            <div class="row">
+                <div class="col-md-6 form-group mb-3">
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required maxlength="100">
+                    <div class="invalid-feedback"></div>
+                </div>
+                <div class="col-md-6 form-group mb-3">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                    <div class="invalid-feedback"></div>
+                </div>
+            </div>
+            <div class="form-group mb-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required maxlength="200">
+                <div class="invalid-feedback"></div>
+            </div>
+            <div class="form-group mb-3">
+                <textarea class="form-control" name="message" id="message" rows="5" placeholder="Message" required maxlength="2000"></textarea>
+                <div class="invalid-feedback"></div>
+                <div class="form-text"><span id="messageCount">0</span>/2000 characters</div>
+            </div>
+            <div class="my-3">
+                <div class="loading" style="display: none;">Sending message...</div>
+                <div class="error-message" style="display: none;"></div>
+                <div class="sent-message" style="display: none;">✅ Your message has been sent successfully! We'll get back to you soon.</div>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary" id="submitBtn">Send Test Message</button>
+            </div>
+        </form>
+        
+        <div class="mt-4 p-3 bg-light rounded">
+            <h6>Test Instructions:</h6>
+            <ul class="small mb-0">
+                <li>Fill out all fields and submit</li>
+                <li>Check for success message</li>
+                <li>Check your email for the message</li>
+                <li>Verify Formspree dashboard for submissions</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="assets/js/formspree-contact.js"></script>
+</body>
+</html>
