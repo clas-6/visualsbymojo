@@ -63,11 +63,11 @@
   <main id="main" data-aos="fade" data-aos-delay="1500">
 
     <!-- ======= Hero Banner Section ======= -->
-    <section class="about-hero-banner d-flex align-items-center justify-content-center" style="background: url('assets/img/gallery/gallery-1.jpg') center/cover no-repeat; min-height: 320px; position: relative;">
+    <section class="about-hero-banner d-flex align-items-center justify-content-center" style="background: url('assets/img/gallery/gallery-1.jpg') center/cover no-repeat; min-height: 50vh; position: relative;">
       <div style="background: rgba(0,0,0,0.45); position: absolute; inset: 0;"></div>
       <div class="container position-relative text-center text-white" style="z-index:2;">
-        <div class="d-flex flex-column align-items-center justify-content-center w-100" style="min-height:220px;">
-          <img src="assets/img/profile-img.png" alt="Akintolure MojolaOluwa portrait" class="about-hero-img profile-img-modern mb-3">
+        <div class="d-flex flex-column align-items-center justify-content-center w-100" style="padding-top: 60px;">
+          <img src="assets/img/profile-img.png" alt="Akintolure MojolaOluwa portrait" class="about-hero-img profile-img-modern mb-3" style="width: 180px; height: 180px; object-fit: cover; object-position: top; border-radius: 50%; border: 5px solid #fff; box-shadow: 0 0 0 5px rgba(255,255,255,0.3);">
           <h1 class="display-5 fw-bold mb-2">Akintolure MojolaOluwa</h1>
           <p class="lead mb-3">Professional Photographer & Cinematographer</p>
           <a class="btn btn-warning btn-lg px-4" href="contact.html">Available for hire</a>
@@ -75,11 +75,6 @@
       </div>
     </section>
     <!-- End Hero Banner Section -->
-
-    <!-- ======= End Page Header ======= -->
-    <div class="page-header d-flex align-items-center d-none">
-      <!-- Hidden old header, replaced by hero banner above -->
-    </div><!-- End Page Header -->
 
     <!-- ======= Skills/Services Section ======= -->
     <section class="about-skills py-5 bg-light">
@@ -266,16 +261,20 @@
     <script>
       // Make phone and email clickable
       document.addEventListener('DOMContentLoaded', function() {
-        var phone = document.querySelector('li strong:contains("Phone")');
-        if (phone && phone.nextSibling) {
-          var number = phone.nextSibling.textContent.trim();
-          phone.nextSibling.innerHTML = `<a href="tel:${number}">${number}</a>`;
-        }
-        var email = document.querySelector('li strong:contains("Email")');
-        if (email && email.nextSibling) {
-          var mail = email.nextSibling.textContent.trim();
-          email.nextSibling.innerHTML = `<a href="mailto:${mail}">${mail}</a>`;
-        }
+        const strongTags = document.querySelectorAll('.about .content ul li strong');
+        strongTags.forEach(strong => {
+          const label = strong.textContent.trim();
+          const span = strong.nextElementSibling;
+          if (span && span.tagName === 'SPAN') {
+            if (label.includes('Phone')) {
+              const number = span.textContent.trim();
+              span.innerHTML = `<a href="tel:${number.replace(/\s+/g, '')}">${number}</a>`;
+            } else if (label.includes('Email')) {
+              const mail = span.textContent.trim();
+              span.innerHTML = `<a href="mailto:${mail}">${mail}</a>`;
+            }
+          }
+        });
       });
     </script>
     <!-- End Accessibility Improvements -->
