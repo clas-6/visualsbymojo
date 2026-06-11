@@ -644,7 +644,7 @@ h6 {
   text-shadow: 0 2px 8px rgba(0,0,0,0.5);
 }
 .about-skills {
-  background: #060708 !important;
+  background: transparent !important;
 }
 .about-skills .bg-white {
   background: rgba(255, 255, 255, 0.02) !important;
@@ -1425,6 +1425,12 @@ h6 {
   font-size: 14px;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   background-color: transparent !important;
+}
+
+/* Ensure all page content containers and sections have transparent backgrounds to reveal the background slideshow */
+body, #main, section, .footer {
+  background-color: transparent !important;
+  background: transparent !important;
 }
 
 .footer .copyright {
