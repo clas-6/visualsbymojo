@@ -23,11 +23,15 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+html {
+  background-color: #000;
+}
+
 body {
   font-family: var(--font-default);
   font-weight: 400;
   color: var(--color-default);
-  background-color: #000;
+  background-color: transparent;
 }
 
 a {
@@ -1445,7 +1449,7 @@ h6 {
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: -2;
+  z-index: -1;
   pointer-events: none;
   overflow: hidden;
   background-color: #000;
@@ -1460,45 +1464,11 @@ h6 {
   background-size: cover;
   background-position: center;
   opacity: 0;
-  animation: slideshow-zoom-fade 24s linear infinite;
+  transition: opacity 1.8s ease-in-out, transform 6s ease-in-out;
+  transform: scale(1);
 }
 
-.bg-slideshow-slide:nth-child(1) {
-  background-image: url('../img/gallery/gallery-1.jpg');
-  animation-delay: 0s;
-}
-
-.bg-slideshow-slide:nth-child(2) {
-  background-image: url('../img/gallery/gallery-3.jpg');
-  animation-delay: 6s;
-}
-
-.bg-slideshow-slide:nth-child(3) {
-  background-image: url('../img/gallery/gallery-6.jpg');
-  animation-delay: 12s;
-}
-
-.bg-slideshow-slide:nth-child(4) {
-  background-image: url('../img/gallery/gallery-8.jpg');
-  animation-delay: 18s;
-}
-
-@keyframes slideshow-zoom-fade {
-  0% {
-    opacity: 0;
-    transform: scale(1) rotate(0.002deg);
-  }
-  6% {
-    opacity: 0.12; /* Faint background overlay */
-  }
-  25% {
-    opacity: 0.12;
-  }
-  31% {
-    opacity: 0;
-    transform: scale(1.05) rotate(0.002deg); /* Subtle pan/zoom effect */
-  }
-  100% {
-    opacity: 0;
-  }
+.bg-slideshow-slide.active {
+  opacity: 0.18; /* Faint background overlay */
+  transform: scale(1.04); /* Subtle Ken Burns zoom effect */
 }
