@@ -16,7 +16,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -31,6 +31,12 @@
 </head>
 
 <body>
+
+  <!-- ======= Background Slideshow ======= -->
+  <div class="bg-slideshow">
+    <div class="bg-slideshow-slide active"></div>
+    <div class="bg-slideshow-slide"></div>
+  </div>
 
   <!-- ======= Header ======= -->
   <header id="header" class="header d-flex align-items-center fixed-top">
@@ -64,7 +70,7 @@
   <main id="main" data-aos="fade" data-aos-delay="1500">
 
     <!-- ======= Hero Banner Section ======= -->
-    <section class="about-hero-banner d-flex align-items-center justify-content-center" style="background: url('assets/img/gallery/gallery-1.jpg') center/cover no-repeat; min-height: 320px; position: relative;">
+    <section class="about-hero-banner d-flex align-items-center justify-content-center" style="background: transparent; min-height: 320px; position: relative;">
       <div style="background: rgba(0,0,0,0.45); position: absolute; inset: 0;"></div>
       <div class="container position-relative text-center text-white" style="z-index:2;">
         <div class="d-flex flex-column align-items-center justify-content-center w-100" style="min-height:220px;">
@@ -307,6 +313,57 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Background Slideshow Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const images = [];
+      for (let i = 1; i <= 21; i++) {
+        images.push(`assets/img/gallery/gallery-${i}.jpg`);
+      }
+      
+      const slides = document.querySelectorAll('.bg-slideshow-slide');
+      if (slides.length < 2) return;
+      
+      let currentImageIndex = 0;
+      let activeSlideIndex = 0;
+      
+      // Shuffle images array so it's a random order each load
+      function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]];
+        }
+      }
+      shuffleArray(images);
+      
+      // Set initial images
+      slides[0].style.backgroundImage = `url('${images[0]}')`;
+      slides[1].style.backgroundImage = `url('${images[1]}')`;
+      
+      setInterval(() => {
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        const nextImageIndex = (currentImageIndex + 1) % images.length;
+        
+        const currentSlide = slides[activeSlideIndex];
+        activeSlideIndex = (activeSlideIndex + 1) % 2;
+        const nextSlide = slides[activeSlideIndex];
+        
+        // Update the image of the slide about to fade in
+        nextSlide.style.backgroundImage = `url('${images[currentImageIndex]}')`;
+        
+        // Trigger crossfade
+        currentSlide.classList.remove('active');
+        nextSlide.classList.add('active');
+        
+        // Preload next image into inactive slide after crossfade completes
+        setTimeout(() => {
+          currentSlide.style.backgroundImage = `url('${images[nextImageIndex]}')`;
+        }, 1800);
+        
+      }, 5500); // Crossfade every 5.5 seconds
+    });
+  </script>
 
 </body>
 
