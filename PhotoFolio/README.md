@@ -1,6 +1,6 @@
 # Visuals by IamMojo - PhotoFolio
 
-Professional photography and cinematography portfolio website for Akintolure MojolaOluwa, based in Lagos, Nigeria. This site showcases visual storytelling for events, brands, and portraits.
+Professional photography and cinematography portfolio website for MojolaOluwa Akintolure, based in Lagos, Nigeria. This site showcases visual storytelling for events, brands, and portraits.
 
 ## Features
 - Responsive gallery of photography works
@@ -37,4 +37,4 @@ Professional photography and cinematography portfolio website for Akintolure Moj
 - No build step required; static HTML/CSS/JS.
 
 ## License
-This project is for portfolio and demonstration purposes. All images and content © Akintolure MojolaOluwa.
+This project is for portfolio and demonstration purposes. All images and content © MojolaOluwa Akintolure.
