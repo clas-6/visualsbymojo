@@ -1469,6 +1469,6 @@ h6 {
 }
 
 .bg-slideshow-slide.active {
-  opacity: 0.18; /* Faint background overlay */
+  opacity: 0.32; /* Faint background overlay */
   transform: scale(1.04); /* Subtle Ken Burns zoom effect */
 }
