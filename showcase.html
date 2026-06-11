@@ -16,7 +16,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -35,7 +35,7 @@
     }
     
     .showcase-card {
-      background: #161718;
+      background: #0f1011;
       border-radius: 16px;
       overflow: hidden;
       transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
@@ -48,8 +48,8 @@
     
     .showcase-card:hover {
       transform: translateY(-8px);
-      box-shadow: 0 12px 30px rgba(90, 129, 212, 0.25);
-      border-color: #5a81d4;
+      box-shadow: 0 12px 30px rgba(229, 193, 88, 0.2);
+      border-color: #e5c158;
     }
     
     .showcase-img-wrapper {
@@ -68,6 +68,26 @@
     
     .showcase-card:hover .showcase-img {
       transform: scale(1.05);
+    }
+    
+    /* Play Button Overlay */
+    .showcase-img-wrapper::after {
+      content: '\F5B0'; /* Bootstrap icon bi-play-circle-fill */
+      font-family: "bootstrap-icons";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.9);
+      font-size: 3.5rem;
+      color: rgba(229, 193, 88, 0.85);
+      z-index: 2;
+      opacity: 0;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    
+    .showcase-card:hover .showcase-img-wrapper::after {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
     }
     
     .showcase-badge {
@@ -114,7 +134,7 @@
     }
     
     .showcase-action-text {
-      color: #5a81d4;
+      color: #e5c158;
       font-size: 13px;
       font-weight: 700;
       text-transform: uppercase;

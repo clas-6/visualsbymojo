@@ -16,7 +16,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -31,39 +31,43 @@
  
   <style>
     .pricing .pricing-item {
-      background: var(--color-secondary);
+      background: #0f1011;
       padding: 25px;
       border-radius: 8px;
       border-bottom: none;
       height: 100%;
     }
     .pricing .card {
-      background: #fff;
+      background: #0f1011;
       border-radius: 16px;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-      border: 2px solid #e0e0e0;
-      transition: box-shadow 0.2s, border-color 0.2s;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+      border: 2px solid #232323;
+      transition: box-shadow 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
     }
     .pricing .card:hover {
-      box-shadow: 0 8px 32px rgba(0,0,0,0.16);
-      border-color: #bdbdbd;
+      box-shadow: 0 8px 32px rgba(229, 193, 88, 0.15);
+      border-color: #e5c158;
+      transform: translateY(-5px);
     }
     .pricing .card .card-title {
-      color: #222;
+      color: #fff;
       font-weight: 700;
       font-size: 1.25rem;
     }
     .pricing .card .display-6 {
-      color: #d35400;
+      color: #e5c158; /* Gold price tag */
       font-size: 2rem;
     }
     .pricing .card .card-text {
-      color: #555;
+      color: rgba(255, 255, 255, 0.7);
       font-size: 1rem;
     }
     .pricing .card .mb-3 i {
-      color: #d35400;
-      filter: drop-shadow(0 2px 4px rgba(211,84,0,0.15));
+      color: #e5c158;
+      filter: drop-shadow(0 2px 8px rgba(229, 193, 88, 0.25));
+    }
+    .pricing .card .small {
+      color: rgba(255, 255, 255, 0.5) !important;
     }
     @media (max-width: 767px) {
       .pricing .card {
